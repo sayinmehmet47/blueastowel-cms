@@ -1,0 +1,34 @@
+services:
+  blueastowel:
+    image: sayinmehmet47/blueastowel:latest
+    ports:
+      - '3000:3000'
+    environment:
+      - NEXT_PUBLIC_PAYLOAD_APP_URL=http://payload:3000
+      - PAYLOAD_API_KEY=50ab8231-770c-4fb9-9ec5-e1ce67650270
+      - PAYLOAD_API_SLUG=users
+      - URL=http://localhost:3000
+
+  payload:
+    image: sayinmehmet47/payload-cms-app:latest
+    ports:
+      - '3001:3000'
+    depends_on:
+      - mongo
+    environment:
+      - DATABASE_URI=mongodb://mongo/payload-template-blank
+      - PAYLOAD_SECRET=YOUR_SECRET_HERE
+      - SMTP_USER=blueastowel92@gmail.com
+      - SMTP_PASS=rqmr tacp imuq xgvj
+  mongo:
+    image: mongo:latest
+    ports:
+      - '27017:27017'
+    volumes:
+      - data:/data/db
+    command: ["--storageEngine=wiredTiger"]
+    logging:
+      driver: none
+
+volumes:
+  data:
