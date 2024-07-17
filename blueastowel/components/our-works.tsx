@@ -31,7 +31,7 @@ const OurWorks = () => {
           <div className="h-64 overflow-hidden rounded-lg shadow-lg border-4 border-gray-200">
             <Image
               className="object-cover w-full h-full cursor-pointer"
-              src={process.env.NEXT_PUBLIC_PAYLOAD_APP_URL + imageUrl}
+              src={`/api/fetch-image?path=${imageUrl}`}
               alt="Beach Towel Design"
               width={300}
               height={200}
@@ -46,7 +46,7 @@ const OurWorks = () => {
       <Lightbox
         index={selectedIndex}
         slides={images.map((imageUrl) => ({
-          src: process.env.NEXT_PUBLIC_PAYLOAD_APP_URL + imageUrl,
+          src: `/api/fetch-image?path=${imageUrl}`,
         }))}
         close={() => setSelectedIndex(-1)}
         open={selectedIndex >= 0}

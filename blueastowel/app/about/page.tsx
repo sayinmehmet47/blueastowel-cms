@@ -6,7 +6,7 @@ import { type About, AboutUs, Owner } from './about-us';
 import React, { useEffect, useState } from 'react';
 
 const About = () => {
-  const [aboutUs, setAboutUs] = useState<AboutUs>();
+  const [, setAboutUs] = useState<AboutUs>();
   const [owners, setOwners] = useState<Owner[]>();
   const [about, setAbout] = useState<About[]>();
 
@@ -33,9 +33,7 @@ const About = () => {
               >
                 <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 relative">
                   <Image
-                    src={
-                      process.env.NEXT_PUBLIC_PAYLOAD_APP_URL + owner.image.url
-                    }
+                    src={`/api/fetch-image?path=${owner.image.url}`}
                     layout="fill"
                     objectFit="cover"
                     className="rounded-full"

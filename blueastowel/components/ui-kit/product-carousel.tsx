@@ -8,26 +8,30 @@ const OPTIONS = { loop: true };
 const fetchImageUrls = async () => {
   const response = await fetch('/api/main-page-carousel');
   const data = await response.json();
-  const imageUrls = await Promise.all(
-    data.docs.map(async (doc: any) => {
-      const { url } = doc.image;
-      return `${process.env.NEXT_PUBLIC_PAYLOAD_APP_URL}${url}`;
-    })
-  );
-  return imageUrls;
+  return data;
 };
 
 export function ProductCarousel() {
   const [images, setImages] = useState<string[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const loadImageUrls = async () => {
-      const imageUrls = await fetchImageUrls();
-      setImages(imageUrls);
-    };
-
-    loadImageUrls();
+    fetchImageUrls()
+      .then((imageUrls) => {
+        setImages(imageUrls);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error(error);
+        setLoading(false);
+      });
   }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  console.log(images);
 
   return <Carousel slides={images} options={OPTIONS} />;
 }
