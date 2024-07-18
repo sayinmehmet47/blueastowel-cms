@@ -4,9 +4,10 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  console.log('API call to main-page');
   const slug = process.env.PAYLOAD_API_SLUG;
   const apiKey = process.env.PAYLOAD_API_KEY;
-  const url = `${process.env.PAYLOAD_APP_URL}/api/main-page`;
+  const url = `${process.env.PAYLOAD_APP_URL}/api/cms/main-page`;
 
   // check if the environment variables are set
   if (!slug || !apiKey || !url) {

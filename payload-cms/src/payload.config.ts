@@ -36,12 +36,16 @@ export default buildConfig({
     'http://localhost:3001',
     'https://localhost:3000',
     'https://localhost:3001',
+    'https://blueastowel.com',
+    'https://www.blueastowel.com',
   ],
   csrf: [
     'http://localhost:3000',
     'http://localhost:3001',
     'https://localhost:3000',
     'https://localhost:3001',
+    'https://blueastowel.com',
+    'https://www.blueastowel.com',
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
@@ -66,5 +70,8 @@ export default buildConfig({
     },
     fromName: 'Your Name or Your Company Name',
     fromAddress: 'blueastowel92@gmail.com',
+  },
+  routes: {
+    api: '/api/cms',
   },
 });

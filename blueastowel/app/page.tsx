@@ -91,10 +91,12 @@ const AccordionSection = () => (
 );
 
 const getMainPgData = async () => {
+  console.log('API call to main-page');
   const response = await fetch(`${process.env.URL}/api/main-page`, {
     cache: 'no-store',
   });
   const data = await response.json();
+  console.log(data);
   return data.docs[0];
 };
 

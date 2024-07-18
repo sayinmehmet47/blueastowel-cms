@@ -6,7 +6,7 @@ export default async function handler(
 ) {
   const slug = process.env.PAYLOAD_API_SLUG;
   const apiKey = process.env.PAYLOAD_API_KEY;
-  const url = `${process.env.PAYLOAD_APP_URL}/api/our-works`;
+  const url = `${process.env.PAYLOAD_APP_URL}/api/cms/our-works`;
 
   const response = await fetch(url, {
     headers: {

@@ -6,7 +6,7 @@ export default async function handler(
 ) {
   const slug = process.env.PAYLOAD_API_SLUG;
   const apiKey = process.env.PAYLOAD_API_KEY;
-  const url = `${process.env.PAYLOAD_APP_URL}/api/accordion`;
+  const url = `${process.env.PAYLOAD_APP_URL}/api/cms/accordion`;
 
   const response = await fetch(url, {
     headers: {
