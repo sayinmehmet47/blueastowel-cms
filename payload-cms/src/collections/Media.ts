@@ -14,7 +14,6 @@ export const Media: CollectionConfig = {
       type: 'text',
     },
   ],
-  //make images public
   access: {
     create: () => true,
     read: () => true,
