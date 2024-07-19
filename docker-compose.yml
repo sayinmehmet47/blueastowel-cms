@@ -7,7 +7,7 @@ services:
       - '3000:3000'
     environment:
       - PAYLOAD_APP_URL=http://payload:3000
-      - PAYLOAD_API_KEY=50ab8231-770c-4fb9-9ec5-e1ce67650270
+      - PAYLOAD_API_KEY=2465a770-bc55-437e-8736-65f6f4e1b6ad
       - PAYLOAD_API_SLUG=users
       - URL=http://blueastowel:3000
       - NODE_ENV=production
@@ -23,15 +23,12 @@ services:
     depends_on:
       - mongo
     volumes:
-      - .:/home/node/app
-      - node_modules:/home/node/app/node_modules
+      - payload-data:/home/node/app/dist/media
     environment:
       - DATABASE_URI=mongodb://mongo/payload-template-blank
       - PAYLOAD_SECRET=YOUR_SECRET_HERE
       - SMTP_USER=blueastowel92@gmail.com
       - SMTP_PASS=rqmr tacp imuq xgvj
-    networks:
-      - app-network
 
   mongo:
     image: mongo:latest
@@ -42,12 +39,11 @@ services:
     command: ["--storageEngine=wiredTiger"]
     logging:
       driver: none
-    networks:
-      - app-network
 
 volumes:
   data:
   node_modules:
+  payload-data:
 
 networks:
   app-network:

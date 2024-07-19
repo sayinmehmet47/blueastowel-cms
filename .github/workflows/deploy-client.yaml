@@ -30,7 +30,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: blueastowel/
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           push: true
           tags: sayinmehmet47/client-blueastowel:latest
 
