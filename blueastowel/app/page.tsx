@@ -45,7 +45,7 @@ const InfoSection = ({
       <div className="flex flex-col gap-3">
         <Button variant="secondary">
           <div className="flex gap-3 items-center">
-            <span>Explore Collection</span>
+            <span>Explore Collections</span>
             <ArrowRight />
           </div>
         </Button>
