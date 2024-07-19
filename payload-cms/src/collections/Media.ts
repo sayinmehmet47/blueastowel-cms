@@ -7,6 +7,49 @@ export const Media: CollectionConfig = {
     staticDir: 'media',
     adminThumbnail: 'thumbnail',
     mimeTypes: ['image/*'],
+    imageSizes: [
+      {
+        name: 'thumbnail',
+        width: 400,
+        height: 300,
+      },
+      {
+        name: 'preview',
+        width: 800,
+        height: 800,
+        formatOptions: {
+          format: 'webp',
+        },
+        withoutEnlargement: true,
+      },
+      {
+        name: 'landscape',
+        width: 2880,
+        height: 2160,
+        formatOptions: {
+          format: 'webp',
+        },
+        withoutEnlargement: true,
+      },
+      {
+        name: 'portrait',
+        width: 2160,
+        height: 2880,
+        formatOptions: {
+          format: 'webp',
+        },
+        withoutEnlargement: true,
+      },
+      {
+        name: 'square',
+        width: 2160,
+        height: 2160,
+        formatOptions: {
+          format: 'webp',
+        },
+        withoutEnlargement: true,
+      },
+    ],
   },
   fields: [
     {
@@ -14,6 +57,8 @@ export const Media: CollectionConfig = {
       type: 'text',
     },
   ],
+
+  timestamps: true,
   access: {
     create: () => true,
     read: () => true,
