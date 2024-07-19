@@ -14,7 +14,7 @@ services:
       - mongo
     environment:
       DATABASE_URI: mongodb://mongo:27017/payload
-      PORT: 3000
+      PORT: 3001
       NODE_ENV: development
       PAYLOAD_SECRET: TESTING
 
