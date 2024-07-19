@@ -14,7 +14,7 @@ const HeroSection = ({
   <div className="relative flex h-[520px] w-full items-center justify-center text-center">
     <Image
       src="/hero.png"
-      alt="Luxurious Towels"
+      alt="Luxurious Towels Image"
       layout="fill"
       objectFit="cover"
     />
