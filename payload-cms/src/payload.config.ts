@@ -40,6 +40,7 @@ export default buildConfig({
     'https://localhost:3001',
     'https://blueastowel.com',
     'https://www.blueastowel.com',
+    'https://payload.blueastowel.com',
   ],
   csrf: [
     'http://localhost:3000',
@@ -48,7 +49,7 @@ export default buildConfig({
     'https://localhost:3001',
     'https://blueastowel.com',
     'https://www.blueastowel.com',
-    'https://payload.blueastowel.com/',
+    'https://payload.blueastowel.com',
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
