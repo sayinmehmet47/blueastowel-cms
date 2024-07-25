@@ -14,6 +14,7 @@ import RoundedBeachTowels from './collections/RoundedBeachTowel';
 import MainPageCarousel from './collections/MainPageCarousel';
 import MainPageAccordion from './collections/MainPageAccordion';
 import MainPage from './collections/MainPage';
+import Towels from './collections/Towels';
 
 export default buildConfig({
   admin: {
@@ -30,6 +31,7 @@ export default buildConfig({
     MainPageCarousel,
     MainPageAccordion,
     MainPage,
+    Towels,
   ],
   cors: [
     'http://localhost:3000',

@@ -44,10 +44,12 @@ const InfoSection = ({
     <div className="flex-auto w-36 gap-3 flex flex-col">
       <div className="flex flex-col gap-3">
         <Button variant="secondary">
-          <div className="flex gap-3 items-center">
-            <span>Explore Collections</span>
-            <ArrowRight />
-          </div>
+          <Link href="/explore-collection">
+            <div className="flex gap-3 items-center">
+              <span>Explore Collections</span>
+              <ArrowRight />
+            </div>
+          </Link>
         </Button>
         <Button variant="secondary">
           <Link href="/beach-towel-designs">
