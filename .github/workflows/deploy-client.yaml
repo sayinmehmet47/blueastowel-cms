@@ -42,17 +42,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       
-      - name: Install SSH key
-        uses: webfactory/ssh-agent@v0.5.3
-        with:
-          ssh-private-key: ${{ secrets.HETZNER_KEY }}
-      
-      - name: Deploy new image to Hetzner and restart Nginx
-        run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.HETZNER_USER }}@${{ secrets.HETZNER_IP }} << 'EOF'
-            cd /root/blueastowel-payload-cms
-            docker-compose down
-            docker-compose pull
-            docker-compose up -d
-            sudo systemctl restart nginx
-          EOF
+      - name: Deploy to Coolify
+        run : |
+         curl --request GET '${{ secrets.COOLIFY_WEBHOOK }}' --header 'Authorization: Bearer ${{ secrets.COOLIFY_TOKEN }}'
