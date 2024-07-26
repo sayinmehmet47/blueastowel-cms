@@ -46,7 +46,7 @@ const InfoSection = ({
         <Button variant="secondary">
           <Link href="/explore-collection">
             <div className="flex gap-3 items-center">
-              <span>Explore Collectione</span>
+              <span>Explore Collections</span>
               <ArrowRight />
             </div>
           </Link>
