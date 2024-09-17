@@ -5,7 +5,7 @@ import Lightbox from 'yet-another-react-lightbox';
 
 const BeachTowelDesigns = () => {
   const [images, setImages] = useState<string[]>([]);
-  const [selectedIndex, setSelectedIndex] = React.useState(-1);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
 
   useEffect(() => {
     fetch('/api/rounded-towels')
