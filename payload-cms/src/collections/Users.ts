@@ -8,6 +8,12 @@ const Users: CollectionConfig = {
   admin: {
     useAsTitle: 'email',
   },
+  access: {
+    update: ({ req: { user } }) => {
+      // Allow updates if the user is an admin
+      return user?.roles?.includes('admin');
+    },
+  },
   fields: [
     {
       name: 'roles',
