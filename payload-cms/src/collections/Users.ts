@@ -9,10 +9,10 @@ const Users: CollectionConfig = {
     useAsTitle: 'email',
   },
   access: {
-    update: ({ req: { user } }) => {
-      // Allow updates if the user is an admin
-      return user?.roles?.includes('admin');
-    },
+    create: () => true,
+    read: () => true,
+    update: () => true,
+    delete: () => true,
   },
   fields: [
     {
