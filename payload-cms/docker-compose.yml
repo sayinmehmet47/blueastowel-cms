@@ -17,6 +17,8 @@ services:
       PORT: 3001
       NODE_ENV: development
       PAYLOAD_SECRET: TESTING
+      SMTP_USER: blueastowel92@gmail.com
+      SMTP_PASS: mpqj dgus jrgu qnil
 
   mongo:
     image: mongo:latest

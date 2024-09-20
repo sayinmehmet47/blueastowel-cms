@@ -28,7 +28,7 @@ services:
       - DATABASE_URI=mongodb://mongo/payload-template-blank
       - PAYLOAD_SECRET=YOUR_SECRET_HERE
       - SMTP_USER=blueastowel92@gmail.com
-      - SMTP_PASS=rqmr tacp imuq xgvj
+      - SMTP_PASS=mpqj dgus jrgu qnil
 
   mongo:
     image: mongo:latest
@@ -36,7 +36,7 @@ services:
       - '27017:27017'
     volumes:
       - data:/data/db
-    command: ["--storageEngine=wiredTiger"]
+    command: ['--storageEngine=wiredTiger']
     logging:
       driver: none
 

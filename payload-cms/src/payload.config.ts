@@ -53,6 +53,9 @@ export default buildConfig({
     'https://www.blueastowel.com',
     'https://payload.blueastowel.com',
   ],
+  rateLimit: {
+    trustProxy: true,
+  },
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },
