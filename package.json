@@ -1,0 +1,16 @@
+{
+  "name": "blueastowel-cms",
+  "version": "1.0.0",
+  "description": "178.191.203.122",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "local": "forego start -f Procfile.local",
+    "local:frontend": "cd blueastowel && PORT=3000 npm run dev",
+    "local:backend": "cd payload-cms && docker-compose up",
+    "dev": "next dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

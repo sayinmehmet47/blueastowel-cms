@@ -80,6 +80,7 @@ export default buildConfig({
           }),
         },
       },
+      enabled: process.env.NODE_ENV === 'production',
     }),
     payloadCloud(),
   ],

@@ -1,3 +1,2 @@
-# blueastowel-cms
-
-178.191.203.122
+- Start the app in local
+  npm run local
