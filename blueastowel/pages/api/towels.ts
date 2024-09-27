@@ -14,6 +14,7 @@ export default async function handler(
       Authorization: `${slug} API-Key ${apiKey}`,
     },
   });
+  // This is the same as `const data = await response.json() as TowelsResponse;`
   const data: TowelsResponse = await response.json();
 
   res.status(200).json(data);
