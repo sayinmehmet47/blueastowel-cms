@@ -23,9 +23,9 @@ export const PartnersSection: React.FC<PartnersSectionProps> = ({
     const logos = logosRef.current;
     if (logos) {
       const animation = logos.animate(
-        [{ transform: 'translateX(100%)' }, { transform: 'translateX(-100%)' }],
+        [{ transform: 'translateX(50%)' }, { transform: 'translateX(-150%)' }],
         {
-          duration: 30000, // 30 seconds for slower animation
+          duration: 60000, // 60 seconds for slower animation
           iterations: Infinity,
           easing: 'linear',
         }
@@ -38,7 +38,7 @@ export const PartnersSection: React.FC<PartnersSectionProps> = ({
   return (
     <section className="partners-section py-8 overflow-hidden">
       <h2 className="text-2xl font-bold text-center mb-6">Our Partners</h2>
-      <div ref={logosRef} className="flex flex-nowrap gap-16 justify-center">
+      <div ref={logosRef} className="flex flex-nowrap gap-32 justify-center">
         {partners.map((partner) => (
           <div key={partner.name} className="partner-logo p-4">
             <Image
