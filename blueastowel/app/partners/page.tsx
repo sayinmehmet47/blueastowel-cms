@@ -3,18 +3,20 @@
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 
-interface Partner {
+export interface Partner {
   name: string;
   logo: {
     url: string;
   };
 }
 
-interface PartnersSectionProps {
+export interface PartnersSectionProps {
   partners: Partner[];
 }
 
-const PartnersSection: React.FC<PartnersSectionProps> = ({ partners }) => {
+export const PartnersSection: React.FC<PartnersSectionProps> = ({
+  partners,
+}) => {
   const logosRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -51,5 +53,3 @@ const PartnersSection: React.FC<PartnersSectionProps> = ({ partners }) => {
     </section>
   );
 };
-
-export default PartnersSection;

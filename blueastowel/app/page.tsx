@@ -6,7 +6,7 @@ import '../components/ui/corousel/embla.css';
 import { MainPageAccordion } from '@/components/ui-kit/main-page-accordion';
 import { HeroSection } from './hero-section/HeroSection';
 import { getMainPgData, getPartnersData } from '@/lib/api';
-import PartnersSection from './partners/page';
+import { PartnersSection } from './partners/page';
 
 const InfoSection = ({
   infoContent = 'From luxurious bath towels to stylish beach towels, our collections cater to all your needs. Elevate your space with our high-quality, unique designs.',
