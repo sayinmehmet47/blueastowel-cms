@@ -44,6 +44,4 @@ jobs:
 
       - name: Deploy to Coolify
         run: |
-          curl --http1.1 --request GET '${{ secrets.COOLIFY_WEBHOOK }}' \
-          --header 'Authorization: Bearer ${{ secrets.COOLIFY_TOKEN }}' \
-          --header 'User-Agent: GitHubAction/1.0'
+          curl --http1.1 --request GET '${{ secrets.COOLIFY_WEBHOOK }}' --header 'Authorization: Bearer ${{ secrets.COOLIFY_TOKEN }}'
