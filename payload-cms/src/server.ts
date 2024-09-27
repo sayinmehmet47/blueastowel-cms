@@ -17,9 +17,7 @@ const start = async () => {
     onInit: async () => {
       payload.logger.info(`Payload Admin URL: ${payload.getAdminURL()}`)
     },
-  })
 
-  // Add your own express routes here
 
   app.listen(3000)
 }
