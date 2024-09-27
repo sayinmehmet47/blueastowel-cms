@@ -79,6 +79,7 @@ export default async function Home() {
       <FashionistaSection fashionistaContent={fashionistaContent} />
       <CarouselSection />
       <AccordionSection />
+      test4
     </main>
   );
 }
