@@ -6,6 +6,7 @@ import { ArrowRight } from 'lucide-react';
 import '../components/ui/corousel/embla.css';
 import { MainPageAccordion } from '@/components/ui-kit/main-page-accordion';
 import { HeroSection } from './hero-section/HeroSection';
+import { getMainPgData } from '@/lib/api';
 
 const InfoSection = ({
   infoContent = 'From luxurious bath towels to stylish beach towels, our collections cater to all your needs. Elevate your space with our high-quality, unique designs.',
@@ -62,15 +63,6 @@ const AccordionSection = () => (
     <MainPageAccordion />
   </section>
 );
-
-export const getMainPgData = async () => {
-  console.log('API call to main-page');
-  const response = await fetch(`${process.env.URL}/api/main-page`, {
-    cache: 'no-store',
-  });
-  const data = await response.json();
-  return data.docs[0];
-};
 
 export default async function Home() {
   const mainPageData = await getMainPgData();

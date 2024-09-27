@@ -1,7 +1,7 @@
 import MenuBar from '@/components/ui-kit/menu-bar';
+import { getMainPgData } from '@/lib/api';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getMainPgData } from '../page';
 
 export const HeroSection = async ({
   heroTitle = 'Experience Ultimate Comfort',
