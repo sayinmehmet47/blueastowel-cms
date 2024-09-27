@@ -14,14 +14,20 @@ const MainPage: CollectionConfig = {
       required: true,
     },
     {
+      name: 'heroImage',
+      type: 'upload',
+      relationTo: 'media',
+      required: true,
+    },
+    {
       name: 'infoContent',
       type: 'richText',
-      required: true,
+      required: false,
     },
     {
       name: 'fashionistaContent',
       type: 'richText',
-      required: true,
+      required: false,
     },
   ],
 };
