@@ -1,12 +1,12 @@
 import { ProductCarousel } from '@/components/ui-kit/product-carousel';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import '../components/ui/corousel/embla.css';
 import { MainPageAccordion } from '@/components/ui-kit/main-page-accordion';
 import { HeroSection } from './hero-section/HeroSection';
-import { getMainPgData } from '@/lib/api';
+import { getMainPgData, getPartnersData } from '@/lib/api';
+import PartnersSection from './partners/page';
 
 const InfoSection = ({
   infoContent = 'From luxurious bath towels to stylish beach towels, our collections cater to all your needs. Elevate your space with our high-quality, unique designs.',
@@ -66,6 +66,7 @@ const AccordionSection = () => (
 
 export default async function Home() {
   const mainPageData = await getMainPgData();
+  const partnersData = await getPartnersData();
   const infoContent = mainPageData.infoContent[0].children[0].text;
   const fashionistaContent =
     mainPageData.fashionistaContent[0].children[0].text;
@@ -79,6 +80,7 @@ export default async function Home() {
       <FashionistaSection fashionistaContent={fashionistaContent} />
       <CarouselSection />
       <AccordionSection />
+      <PartnersSection partners={partnersData} />
     </main>
   );
 }

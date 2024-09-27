@@ -17,6 +17,7 @@ import MainPageAccordion from './collections/MainPageAccordion';
 import MainPage from './collections/MainPage';
 import Towels from './collections/Towels';
 import { cloudStorage } from '@payloadcms/plugin-cloud-storage';
+import Partners from './collections/Partners';
 
 export default buildConfig({
   admin: {
@@ -34,6 +35,7 @@ export default buildConfig({
     MainPageAccordion,
     MainPage,
     Towels,
+    Partners,
   ],
   cors: [
     'http://localhost:3000',
