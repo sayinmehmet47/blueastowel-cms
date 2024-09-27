@@ -39,7 +39,6 @@ const ImageCard: React.FC<{
   </div>
 );
 
-// Fetch images function, extracted for separation of concerns
 const fetchImages = async (): Promise<ImageData[]> => {
   try {
     const response = await fetch('/api/our-works');
